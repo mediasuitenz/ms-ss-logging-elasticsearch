@@ -1,9 +1,9 @@
 <?php
 
 /*
- * This file is part of the Monolog package.
+ * This file is a modification of a standard monolog handler to be compatible with the latest version of Elastica. So as can be used in SS4 projects
  *
- * (c) Jordi Boggiano <j.boggiano@seld.be>
+ * (c) Robbie Mcclintock <robbie@mediasuite.co.nz>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,28 +11,12 @@
 namespace Mediasuite\MsSsLoggingElasticsearch;
 
 use Monolog\Formatter\FormatterInterface;
-use CustomESFormatter;
+use Mediasuite\MsSsLoggingElasticsearch\CustomESFormatter;
 use Monolog\Logger;
 use Elastica\Client;
 use Elastica\Exception\ExceptionInterface;
 use Monolog\Handler\AbstractProcessingHandler;
 
-/**
- * Elastic Search handler
- *
- * Usage example:
- *
- *    $client = new \Elastica\Client();
- *    $options = array(
- *        'index' => 'elastic_index_name',
- *        'type' => 'elastic_doc_type',
- *    );
- *    $handler = new ElasticSearchHandler($client, $options);
- *    $log = new Logger('application');
- *    $log->pushHandler($handler);
- *
- * @author Jelle Vink <jelle.vink@gmail.com>
- */
 class CustomESHandler extends AbstractProcessingHandler
 {
     /**
