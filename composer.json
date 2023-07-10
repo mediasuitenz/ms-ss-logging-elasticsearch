@@ -1,0 +1,17 @@
+{
+    "name": "mediasuite/ms-ss-logging-elasticsearch",
+    "description": "A modification of monologs public event handler to allow Elastic Search to work with Silverstripe 4 projects.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Mediasuite\\MsSsLoggingElasticsearch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robbie McClintock",
+            "email": "robbiemcclintock@gmail.com"
+        }
+    ],
+    "require": {}
+}
