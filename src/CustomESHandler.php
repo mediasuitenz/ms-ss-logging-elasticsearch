@@ -10,7 +10,7 @@
  */
 
 use Monolog\Formatter\FormatterInterface;
-use CustomLogger\CustomESFormatter;
+use CustomESFormatter;
 use Monolog\Logger;
 use Elastica\Client;
 use Elastica\Exception\ExceptionInterface;
